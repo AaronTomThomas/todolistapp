@@ -9,3 +9,7 @@ Modified the original project by adding a delete button to manage the number of 
 Utilised prisma as a database to manage the todo-items as well as ensure that they are saved on page reload by managing communication between
 client and server.
 
+...
+#Run to install dependencies
+'npm install'
+
