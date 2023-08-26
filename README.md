@@ -17,7 +17,7 @@ to set up prisma db, 'npx prisma generate' and/or 'npx prisma migrate dev --name
 
 #Creating environment for DB
 
-create a .env file with contents "DATABASE_URL = "file:/dev.db"
+create a .env file with contents "DATABASE_URL = "file:./dev.db"
 
 The database should then be in sync with the schema in prisma/schema.prisma
 
