@@ -8,13 +8,15 @@ type TodoItemProps = {
     id: string,
     title: string,
     complete: boolean
+    createdAt: Date
+    updatedAt: string
     toggleTodo: (id: string, complete: boolean) => void
     deleteTodo: (id:string) => void
 }
 
 
 
-export function TodoItem({id, title, complete, toggleTodo, deleteTodo}: TodoItemProps){
+export function TodoItem({id, title, complete, createdAt, deletedAt,toggleTodo, deleteTodo}: TodoItemProps){
 
     return (<li>
     
@@ -32,6 +34,7 @@ export function TodoItem({id, title, complete, toggleTodo, deleteTodo}: TodoItem
          dark:bg-gray-800 dark:hover:bg-gray-700 cursor-pointer 
          peer-checked:line-through
          transition ease-in-out delay-50`}>{title}
+         
             <form name = "delete">
                 <button onClick={() => deleteTodo(id)} type = "submit" className= "z-10 rounded hover:bg-red-500 p-2">          
                    <svg xmlns="http://www.w3.org/2000/svg" 
@@ -45,5 +48,13 @@ export function TodoItem({id, title, complete, toggleTodo, deleteTodo}: TodoItem
                 </button>
             </form>
        </label>
+       <div className = "flex justify-between mr-1 ml-1 mt-1.5">
+       <a href="/" className="no-underline text-xs">
+           {createdAt.toLocaleDateString()}
+        </a>
+        <a href="/" className="no-underline text-xs justify-end">
+           {createdAt.toLocaleTimeString()}
+         </a>
+         </div>
     </li>)
 }

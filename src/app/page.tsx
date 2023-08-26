@@ -35,8 +35,8 @@ export default async function Home() {
 
   return <h1>
     <header className="flex justify-between">
-      <h1 className="mb-5 text-lg font-medium text-gray-900 dark:text-white">Todos</h1>
-      <Link className="border border-gray-600
+      <h1 className="font-sans mb-5 text-lg font-medium text-gray-900 dark:text-white">Todos</h1>
+      <Link className="font-sans border border-gray-600
       text-gray-300 px-2 py-1 rounded
       transition ease-in-out delay-50
       hover:bg-slate-700 focus-within:bg-slate-700 

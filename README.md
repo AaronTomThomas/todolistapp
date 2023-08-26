@@ -10,14 +10,19 @@ Utilised prisma as a database to manage the todo-items as well as ensure that th
 client and server.
 
 ...
+
+## Setting up for development/testing
 #Run to install dependencies
 'npm install'
 
-to set up prisma db, 'npx prisma generate' and/or 'npx prisma migrate dev --name init'
+to set up prisma db, 
+create a .env file with contents "DATABASE_URL = "file:./dev.db"
+
+
+run, 'npx prisma generate' and/or 'npx prisma migrate dev --name init'
 
 #Creating environment for DB
 
-create a .env file with contents "DATABASE_URL = "file:./dev.db"
 
 The database should then be in sync with the schema in prisma/schema.prisma
 
